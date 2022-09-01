@@ -26,8 +26,8 @@ def main():
     months: int = years * 12
     # get monthly payment, then calculate total payments and interest
     monthly_payments: float = round(calc_monthly_payment(principal, rate, months), 2)
-    total_pay: float = round(monthly_payments * months, 2)
-    total_interest: float = round(total_pay - principal, 2)
+    total_pay: float = monthly_payments * months
+    total_interest: float = total_pay - principal
     # print output
     print(f"""
 Principal:       ${principal}
